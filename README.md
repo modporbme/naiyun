@@ -4,7 +4,7 @@
 >
 > 本文包含奈云网络加速服务（机场）的套餐、测速与节点整理。价格、库存、域名可能变化，下单以官网为准。
 
-
+🇨🇳 中文
 
 ---
 
@@ -61,7 +61,7 @@ TRUST20
 
 年费原价在不同页面写过 ¥168 或其它数字，折扣后以结算页为准。
 
-![优惠相关截图](https://raw.githubusercontent.com/jdnei/naiyun/main/naiyun/photo_2026-07-07_10-46-17.jpg)
+![优惠相关截图](https://raw.githubusercontent.com/modporbme/naiyun/main/naiyun/photo_2026-07-07_10-46-17.jpg)
 
 ---
 
@@ -102,37 +102,37 @@ TRUST20
 
 ### 1. 晚高峰测速
 
-![晚高峰测速](https://raw.githubusercontent.com/jdnei/naiyun/main/naiyun/MiaoKo-%20.%20.cc-7737-speed.png)
+![晚高峰测速](https://raw.githubusercontent.com/modporbme/naiyun/main/naiyun/MiaoKo-%20.%20.cc-7737-speed.png)
 
 ### 2. 流媒体解锁报告
 
-![流媒体解锁](https://raw.githubusercontent.com/jdnei/naiyun/main/naiyun/MiaoKo-%20.%20.cc-5631-test.png)
+![流媒体解锁](https://raw.githubusercontent.com/modporbme/naiyun/main/naiyun/MiaoKo-%20.%20.cc-5631-test.png)
 
 ### 3. 落地入口分析
 
-![落地入口分析](https://raw.githubusercontent.com/jdnei/naiyun/main/naiyun/MiaoKo-%20.%20.cc-6461-analyze.png)
+![落地入口分析](https://raw.githubusercontent.com/modporbme/naiyun/main/naiyun/MiaoKo-%20.%20.cc-6461-analyze.png)
 
 ### 4. 家宽纯净度分析
 
 **美国**
 
-![美国家宽纯净度](https://raw.githubusercontent.com/jdnei/naiyun/main/naiyun/IPPure-1781234465268.png)
+![美国家宽纯净度](https://raw.githubusercontent.com/modporbme/naiyun/main/naiyun/IPPure-1781234465268.png)
 
 **香港**
 
-![香港家宽纯净度](https://raw.githubusercontent.com/jdnei/naiyun/main/naiyun/IPPure-1781234508008.png)
+![香港家宽纯净度](https://raw.githubusercontent.com/modporbme/naiyun/main/naiyun/IPPure-1781234508008.png)
 
 **台湾**
 
-![台湾家宽纯净度](https://raw.githubusercontent.com/jdnei/naiyun/main/naiyun/IPPure-1781234555188.png)
+![台湾家宽纯净度](https://raw.githubusercontent.com/modporbme/naiyun/main/naiyun/IPPure-1781234555188.png)
 
 **日本**
 
-![日本家宽纯净度](https://raw.githubusercontent.com/jdnei/naiyun/main/naiyun/IPPure-1781234584653.png)
+![日本家宽纯净度](https://raw.githubusercontent.com/modporbme/naiyun/main/naiyun/IPPure-1781234584653.png)
 
 **韩国**
 
-![韩国家宽纯净度](https://raw.githubusercontent.com/jdnei/naiyun/main/naiyun/IPPure-1781234622676.png)
+![韩国家宽纯净度](https://raw.githubusercontent.com/modporbme/naiyun/main/naiyun/IPPure-1781234622676.png)
 
 图片若打不开，多半是 GitHub 图床限流，不影响套餐表本身。
 
