@@ -1,0 +1,97 @@
+name: Daily Date Update
+
+on:
+  schedule:
+    - cron: "22 19 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update date and pad after speed section
+        run: |
+          python3 << 'PY'
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          import os, random, re
+
+          target = "README.md"
+          if not os.path.isfile(target):
+              print("cwd:", os.getcwd())
+              print("files:", os.listdir("."))
+              raise SystemExit(f"{target} is not a file")
+
+          now = datetime.now(ZoneInfo("Asia/Shanghai"))
+          full = f"{now.year}年{now.month}月{now.day}日"
+
+          with open(target, "r", encoding="utf-8") as f:
+              original = f.read()
+
+          text = re.sub(
+              r"（\d{4}年\d{1,2}月\d{1,2}日更新）",
+              f"（{full}更新）",
+              original,
+              count=1,
+          )
+
+          lines = text.splitlines()
+          # 锚点：测速小节标题后、下一节标题前
+          start = next((i for i, ln in enumerate(lines) if "晚高峰测速" in ln), None)
+          if start is None:
+              start = next((i for i, ln in enumerate(lines) if "性能实测图" in ln), None)
+          if start is None:
+              raise SystemExit("未找到测速小节")
+
+          end = start + 1
+          while end < len(lines) and not lines[end].startswith("### ") and not lines[end].startswith("## "):
+              end += 1
+
+          # start 到 end-1 是测速小节（含标题和图片）
+          # 在该小节末尾处理空行
+          pad_at = end
+          # 小节末尾已有的连续空行数量
+          blank_count = 0
+          j = end - 1
+          while j > start and lines[j].strip() == "":
+              blank_count += 1
+              j -= 1
+
+          if blank_count == 0:
+              lines.insert(end, "")
+              action = "inserted blank (none existed)"
+          else:
+              if random.choice(("insert", "delete")) == "delete":
+                  del lines[end - 1]
+                  action = "deleted one blank"
+              else:
+                  lines.insert(end, "")
+                  action = "inserted extra blank"
+
+          text2 = "\n".join(lines)
+          if original.endswith("\n"):
+              text2 += "\n"
+
+          with open(target, "w", encoding="utf-8") as f:
+              f.write(text2)
+
+          print("date:", full)
+          print("pad:", action)
+          PY
+
+      - name: Commit and push
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add README.md
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "chore: 更新 README 日期"
+            git push
+          fi
