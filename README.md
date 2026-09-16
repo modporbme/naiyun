@@ -11,7 +11,7 @@
 
 需要注册或续费时，统一走：
 
-**v2ny.vip**
+**[v2ny.vip](https://www.v2ny.vip)**
 
 **网络加速服务（机场）**：按每月流量或按量包卖，Basic / Pro / Max 以及 280G、680G 不限时包，节点以 Trojan 等协议为主。
 
